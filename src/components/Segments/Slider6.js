@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 var slideimg1 = require('./../../images/main-slider/slider3/slide1.jpg');
 var slideimg2 = require('./../../images/main-slider/slider3/slide2.jpg');
 
-class Slider3 extends React.Component {
+class Slider6 extends React.Component {
 
     componentDidMount() {
         function loadScript(src) {
@@ -371,4 +371,4 @@ class Slider3 extends React.Component {
     }
 };
 
-export default Slider3;
+export default Slider6;

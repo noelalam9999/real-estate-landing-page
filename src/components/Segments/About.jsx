@@ -48,7 +48,7 @@ class About extends React.Component {
                                 <div className="col-md-5 col-sm-12 text-uppercase text-black">
                                     <span className="font-30 font-weight-300">Welcome</span>
                                     <h2 className="font-40">
-                                        We are <span className={this.props.colorclass1}>creative</span> <span className={this.props.colorclass2}>Building  - Design</span>  Company
+                                        We are <span className={this.props.colorclass1}>creative </span> <span className={this.props.colorclass2}>Building  - Design</span>  Company
                                     </h2>
                                     <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general</p>
                                     <p className="text-lowercase">typefaces and layouts, and in appearance of different general
