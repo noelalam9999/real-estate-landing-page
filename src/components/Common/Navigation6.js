@@ -52,46 +52,51 @@ class Navigation extends React.Component {
                             </ul>
                         </li>
                         <li>
-                            <NavLink to={"#"}>Pages</NavLink>
+                            <NavLink to={"#"}>About Us</NavLink>
                             <ul className="sub-menu v-sub-menu">
-                                <li>
-                                    <NavLink to={"/aboutus"}>About us</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to={"/contactus"}>Contact us</NavLink>
-                                </li>
+                                <li><NavLink to={"/ourstory"}>Our Story</NavLink></li>
+                                <li><NavLink to={"/vision-mission"}>Vision & Mission</NavLink></li>
+                                <li><NavLink to={"/board-of-directors"}>Board Of Directors</NavLink></li>
+                                <li><NavLink to={"/message-from-board-of-directors"}>Message from Board Of Directors</NavLink></li>
+                                <li><NavLink to={"/management-team"}>Management Team</NavLink></li>
+                                <li><NavLink to={"/companies"}>Companies</NavLink></li>
+                                <li><NavLink to={"/ourclient"}>Our Clients</NavLink></li>
+                                <li><NavLink to={"/contactus"}>CSR</NavLink></li>
                             </ul>
                         </li>
                         <li>
-                            <NavLink to={"#"}>News</NavLink>
+                            <NavLink to={"#"}>Projects</NavLink>
                             <ul className="sub-menu v-sub-menu">
-                                <li><NavLink to={"/news-grid"}>Grid</NavLink></li>
-                                <li><NavLink to={"/news-listing"}>Listing</NavLink></li>
-                                <li><NavLink to={"/news-masonary"}>Masonry</NavLink></li>
+                                <li><NavLink to={"/ongoing-projects"}>Ongoing</NavLink></li>
+                                <li><NavLink to={"/upcoming-projects"}>Upcoming</NavLink></li>
+                                <li><NavLink to={"/completed-projects"}>Completed</NavLink></li>
                             </ul>
                         </li>
                         <li>
-                            <NavLink to={"#"}>Works</NavLink>
-                            <ul className="sub-menu v-sub-menu">
+                            <NavLink to={"#"}>News & Events</NavLink>
+                            {/* <ul className="sub-menu v-sub-menu">
                                 <li><NavLink to={"/work-grid"}>Grid</NavLink></li>
                                 <li><NavLink to={"/work-masonary"}>Masonry</NavLink></li>
                                 <li><NavLink to={"/work-carousel"}>Carousel</NavLink></li>
                                 <li><NavLink to={"/project-detail"}>Project Detail</NavLink></li>
-                            </ul>
+                            </ul> */}
                         </li>
                         <li>
-                            <NavLink to={"#"}>Post detail</NavLink>
-                            <ul className="sub-menu v-sub-menu">
+                            <NavLink to={"#"}>Career</NavLink>
+                            {/* <ul className="sub-menu v-sub-menu">
                                 <li><NavLink to={"/post-image"}>Image</NavLink></li>
                                 <li><NavLink to={"/post-gallery"}>Gallery</NavLink></li>
                                 <li><NavLink to={"/post-video"}>Video</NavLink></li>
                                 <li><NavLink to={"/post-right-sidebar"}>Right Sidebar</NavLink></li>
-                            </ul>
+                            </ul> */}
                         </li>
-                        <li className="submenu-direction">
-                            <NavLink to={"#"}>Shortcodes</NavLink>
-                            <ul className="sub-menu">
-                                <li><NavLink to={"/accordian"}>All Elements</NavLink></li>
+                        <li>
+                            <NavLink to={"#"}>Contact</NavLink>
+                            <ul className="sub-menu v-sub-menu">
+                                <li><NavLink to={"/news-grid"}>Land Owners</NavLink></li>
+                                <li><NavLink to={"/news-listing"}>Buyers</NavLink></li>
+                                <li><NavLink to={"/news-masonary"}>Customers</NavLink></li>
+                                <li><NavLink to={"/news-masonary"}>Contacts</NavLink></li>
                             </ul>
                         </li>
                     </ul>
