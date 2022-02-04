@@ -5,13 +5,21 @@ import Home2 from './Pages/Home2';
 import Home3 from './Pages/Home3';
 import Home4 from './Pages/Home4';
 import Home5 from './Pages/Home5';
+import Home6 from './Pages/Home6';
 
 import AboutUs from './Pages/AboutUs';
 import ContactUs from './Pages/ContactUs';
+import OurStory from './Pages/OurStory';
+import VisionAndMission from './Pages/VisionAndMission';
+import BoardOfDirectors from './Pages/BoardOfDirectors';
+import MessageBOD from './Pages/MessageBOD';
+import ManagementTeam from './Pages/ManagementTeam';
+import Companies from './Pages/Companies';
+import OurClient from './Pages/OurClients';
 
-import NewsGrid from './Pages/NewsGrid';
-import NewsListing from './Pages/NewsListing';
-import NewsMasonary from './Pages/NewsMasonary';
+import OngoingProjects from './Pages/OngoingProjects';
+import UpcomingProjects from './Pages/UpcomingProjects';
+import CompletedProjects from './Pages/CompletedProjects';
 
 import WorkGrid from './Pages/WorkGrid';
 import WorkMasonary from './Pages/WorkMasonary';
@@ -49,13 +57,22 @@ class Components extends React.Component {
                             <Route path='/home-3' exact component={Home3} />
                             <Route path='/home-4' exact component={Home4} />
                             <Route path='/home-5' exact component={Home5} />
+                            <Route path='/home-6' exact component={Home6} />
 
                             <Route path='/aboutus' exact component={AboutUs} />
                             <Route path='/contactus' exact component={ContactUs} />
+                            <Route path='/ourstory' exact component={OurStory}/>
+                            <Route path='/vision-mission' exact component={VisionAndMission}/>
+                            <Route path='/board-of-directors' exact component={BoardOfDirectors}/>
+                            <Route path='/message-from-board-of-directors' exact component={MessageBOD}/>
+                            <Route path='/management-team' exact component={ManagementTeam}/>
+                            <Route path='/companies' exact component={Companies}/>
+                            <Route path='/ourclient' exact component={OurClient}/>
 
-                            <Route path='/news-grid' exact component={NewsGrid} />
-                            <Route path='/news-listing' exact component={NewsListing} />
-                            <Route path='/news-masonary' exact component={NewsMasonary} />
+
+                            <Route path='/ongoing-projects' exact component={OngoingProjects} />
+                            <Route path='/upcoming-projects' exact component={UpcomingProjects} />
+                            <Route path='/completed-projects' exact component={CompletedProjects} />
 
                             <Route path='/work-grid' exact component={WorkGrid} />
                             <Route path='/work-masonary' exact component={WorkMasonary} />
