@@ -66,7 +66,6 @@ class Components extends React.Component {
                             <Route path='/post-gallery' exact component={PostGallery} />
                             <Route path='/post-video' exact component={PostVideo} />
                             <Route path='/post-right-sidebar' exact component={PostRightSidebar} />
-
                             <Route path='/accordian' exact component={Accordian} />
                             <Route path='/alertbox' exact component={AlertBox} />
                             <Route path='/button' exact component={Button} />
