@@ -25,38 +25,29 @@ class ClientsLogo extends React.Component {
             navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
             responsive: {
                 0: {
-                    items: 2
+                    items: 1
                 },
                 480: {
-                    items: 3
+                    items: 1
                 },
                 767: {
-                    items: 4
+                    items: 1
                 },
                 1000: {
-                    items: 5
+                    items: 1
                 }
             }
         };
         return (
             <>
-                <div className="section-full p-tb40 bg-black square_shape4 tm-client-wrap">
+                <div className="section-full p-tb40  square_shape4 tm-client-wrap">
                     <div className="container">
                         <div className="section-content">
                             {/* TESTIMONIAL 4 START ON BACKGROUND */}
                             <div className="section-content">
                                 <div className="row">
-                                    <div className="col-md-4 col-sm-12">
-                                        {/* TITLE START */}
-                                        <div className="text-left">
-                                            <h2 className="text-uppercase font-36 text-white">Our Clients</h2>
-                                            <div className="wt-separator-outer">
-                                                <div className="wt-separator bg-white" />
-                                            </div>
-                                        </div>
-                                        {/* TITLE END */}
-                                    </div>
-                                    <div className="col-md-8 col-sm-12">
+                                    
+                                    <div className="col-md-12 col-sm-12">
                                         <div className="section-content bg-white p-tb10">
                                             <OwlCarousel className="owl-carousel home-client-carousel owl-btn-center-v" {...options}>
                                                 {logos.map((item, index) => (
