@@ -61,7 +61,7 @@ const projects = [
     }
 ]
 
-class LatestProjects extends React.Component {
+class StakeHolders extends React.Component {
     componentDidMount(){
         function loadScript(src) {
            
@@ -171,4 +171,4 @@ class LatestProjects extends React.Component {
     }
 };
 
-export default LatestProjects;
+export default StakeHolders;

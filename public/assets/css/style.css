@@ -5949,3 +5949,11 @@ New Menu Style for mobile device (august/2021)
 @media  only screen and (max-width:736px) {
 	#welcome_wrapper .tp-caption.rev_row{padding: 0px !important;}
 }
+.top-100px{
+padding-top:100px;
+padding-bottom:100px;
+}
+
+.height-315px{
+height:315px;
+}

@@ -1,11 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import CountUp from 'react-countup';
 
-var img1 = require('./../../images/our-team5/pic1.jpg');
-
+var bgimg = require('./../../images/background/bg-11.jpg');
 const members = [
     {
         image: require('./../../images/our-team5/pic1.jpg'),
@@ -39,18 +36,16 @@ const members = [
         position: 'Co-manager associated',
     }
 ]
-
-class TeamMembers extends React.Component {
+class Highlights extends React.Component {
     
     render() {
         
         return (
             <>
-                <div className="section-full bg-parallax square_shape3 tm-expert-wrap">
-                        <div className="opacity-08 bg-black">
-                        <div className="container-fluid ">
-                            <div className="section-content">
-                                <div className="row">
+                <div className="section-full p-t90 p-b50 overlay-wraper bg-top-center bg-parallax tm-facts-wrap" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url(" + bgimg.default + ")" }}>
+                        <div className="overlay-main opacity-08 bg-black" />
+                        <div className="container ">
+                        <div className="row">
                                     <div className="col-md-6 col-sm-12 square_shape1 square_shape2">
                                         <div className="wt-left-part m-experts p-t90">
                                             {/* TITLE START */}
@@ -65,7 +60,7 @@ class TeamMembers extends React.Component {
                                                 end diam molestie. Curabitur lorem enim, maximus
                                                 non nulla sed, egestas venenatis felis.
                                             </p>
-                                        
+                                      
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-sm-12">
@@ -87,8 +82,6 @@ class TeamMembers extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
             </>
@@ -96,4 +89,4 @@ class TeamMembers extends React.Component {
     }
 };
 
-export default TeamMembers;
+export default Highlights;

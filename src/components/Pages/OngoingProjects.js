@@ -12,7 +12,7 @@ class OngoingProjects extends React.Component {
             <>
                 <Header6 />
                 <div className="page-content">
-                    <Slider6/>
+                    {/* <Slider6/> */}
                     <OngoingProjGrid />
                 </div>
 
