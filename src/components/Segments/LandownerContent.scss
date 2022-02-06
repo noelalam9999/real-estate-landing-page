@@ -1,0 +1,21 @@
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+.flexleft {
+  background-color: #f1f1f1;
+  flex: 50%;
+}
+
+.flexright {
+  background-color: rgb(99, 99, 99);
+  flex: 50%;
+}
+
+@media (max-width: 800px) {
+  .flexleft,
+  .flexright {
+    flex: 100%;
+    //  flex-direction: column;
+  }
+}
