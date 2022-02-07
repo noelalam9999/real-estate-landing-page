@@ -5,7 +5,7 @@ import Slider6 from './../Segments/Slider6';
 import ProjectsCarousel from '../Segments/ProjectsCarousel';
 import WhoWeAre6 from './../Segments/WhoWeAre6';
 import LocationMap from './../Segments/LocationMap';
-import Media from '../Segments/SocialMedia';
+import VideoInsta from '../Segments/Video-Insta';
 import WideBanner from '../Segments/WideBanner';
 import ClientContact from '../Segments/ClientContact';
 
@@ -19,7 +19,7 @@ class Home6 extends React.Component {
                     <ProjectsCarousel />
                     <WhoWeAre6 />
                     <LocationMap/>
-                    {/* <Media/> */}
+                    <VideoInsta/>
                     <WideBanner/>
                     <ClientContact/>
                 </div>

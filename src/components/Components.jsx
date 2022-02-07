@@ -21,6 +21,13 @@ import OngoingProjects from './Pages/OngoingProjects';
 import UpcomingProjects from './Pages/UpcomingProjects';
 import CompletedProjects from './Pages/CompletedProjects';
 
+import NewsEvents from './Pages/NewsEvents';
+
+import Landowner from './Pages/Landowner';
+import Buyers from './Pages/Buyers';
+import Customer6 from './Pages/Customer6';
+import ContactUs6 from './Pages/ContactUs6';
+
 import WorkGrid from './Pages/WorkGrid';
 import WorkMasonary from './Pages/WorkMasonary';
 import WorkCarousel from './Pages/WorkCarousel';
@@ -72,6 +79,13 @@ class Components extends React.Component {
 
                             <Route path='/ongoing-projects' exact component={OngoingProjects} />
                             <Route path='/upcoming-projects' exact component={UpcomingProjects} />
+                            <Route path='/completed-projects' exact component={CompletedProjects} />
+                            
+                            <Route path='/news-events' exact component={NewsEvents} />
+                            <Route path='/landowner' exact component={Landowner} />
+                            <Route path='/buyers' exact component={Buyers} />
+                            <Route path='/contact-us' exact component={ContactUs6} /> 
+                            <Route path='/customers' exact component={Customer6} /> 
                             <Route path='/completed-projects' exact component={CompletedProjects} />
 
                             <Route path='/work-grid' exact component={WorkGrid} />

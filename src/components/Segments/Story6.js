@@ -4,27 +4,22 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const images = [
-    require('./../../images/gallery/portrait/pic2.jpg'),
-    require('./../../images/gallery/portrait/pic3.jpg'),
-    require('./../../images/gallery/portrait/pic4.jpg'),
-    require('./../../images/gallery/portrait/pic5.jpg'),
-    require('./../../images/gallery/portrait/pic6.jpg'),
-]
+const imageBg = {
+    height:'700px',
+    width:'100%',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)'
+  }
+const imageBg2 = {
+    height:'450px',
+    width:'100%',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)'
+  }
+var img1 = require('./../../images/gallery/portrait/pic1.jpg');
+var img2 = require('./../../images/gallery/portrait/pic3.jpg');
 
-class Story6 extends React.Component {
+class Story extends React.Component {
     
     render() {
-        const options = {
-            loop:true,
-            autoplay:false,
-            autoplayTimeout:3000,
-            margin:30,
-            nav:true,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-            items:1,
-            dots: false,
-        };
         return (
             <>
                 <div className="section-full bg-gray square_shape2 tm-about2-wrap">
@@ -33,17 +28,7 @@ class Story6 extends React.Component {
                                 <div className="row" >
                                     <div className="col-lg-6 col-md-6 p-l0">
                                         <div>
-                                        <OwlCarousel className="owl-carousel about-us-carousel" {...options}>
-                                            {images.map((item, index) => (
-                                                <div className="item" key={index}>
-                                                <div className="ow-img wt-img-effect zoom-slow">
-                                                <NavLink to={""}><img src={item.default} alt="" style={{height:'700px'}}/></NavLink>
-                                                    </div>
-                                                </div>
-
-                                            ))}
-
-                                        </OwlCarousel>
+                                            <NavLink to={""}><img src={img1.default} alt="" style={imageBg}/></NavLink>   
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 " >
@@ -66,31 +51,21 @@ class Story6 extends React.Component {
                     </div>
 
                 {/* WHO WE ARE SEGMENT */}
-                <div className="section-full p-tb50 bg-gray square_shape2 tm-about2-wrap">
+                <div className="section-full p-tb50 tm-about2-wrap" style={{backgroundColor:'#b0bfc6'}}>
                     <div className="container" style={{width:'100%'}}>
                         <div className="section-content " >
                             <div className="row" >
                                 <div className="col-lg-1 col-md-6"></div>
                                 <div className="col-lg-3 col-md-6">
-                                    <div>
-                                    <OwlCarousel className="owl-carousel about-us-carousel" {...options}>
-                                        {images.map((item, index) => (
-                                            <div className="item" key={index}>
-                                            <div className="ow-img wt-img-effect zoom-slow">
-                                            <NavLink to={""}><img src={item.default} alt="" /></NavLink>
-                                                </div>
-                                            </div>
-
-                                        ))}
-
-                                    </OwlCarousel>
+                                    <div className="p-t50">
+                                        <NavLink to={""}><img src={img2.default} alt="" style={imageBg2}/></NavLink>                                                
                                     </div>
                                 </div>
                                 <div className="col-lg-1 col-md-6"></div>
                                 <div className="col-lg-6 col-md-6 " >
                                     <div className="m-about-containt text-uppercase text-black p-t30">
                                         {/* <span className="font-30 font-weight-300">About Us</span> */}
-                                        <h2 className="font-40">WHO WE ARE</h2>
+                                        <h2 className="text-white font-40">WHO WE ARE</h2>
                                         {/* <p><b>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general</b></p> */}
                                         <p className="font-weight-200">In 2004 Manama Group formed a private limited company, Manama Developments Ltd. and introduced themselves as a Real Estate Company in Bangladesh. From the very beginning Manama Developments Ltd. widely renowned for its commitment and excellence in the real estate sector of the country.<br/><br/>
  
@@ -107,7 +82,7 @@ class Story6 extends React.Component {
                 </div>
 
                 {/* APPROACH SEGMENT*/}
-                <div className="section-full bg-gray square_shape2 tm-about2-wrap">
+                <div className="section-full bg-black square_shape2 square_shape1 tm-about2-wrap">
                     <div className="container" style={{width:'100%'}}>
                         <div className="section-content " >
                             <div className="row" >
@@ -115,9 +90,9 @@ class Story6 extends React.Component {
                                 <div className="col-lg-8 col-md-6 " >
                                     <div className="m-about-containt text-uppercase text-black p-t30">
                                         {/* <span className="font-30 font-weight-300">About Us</span> */}
-                                        <h2 className="font-40">APPROACH</h2>
+                                        <h2 className=" text-white font-40">APPROACH</h2>
                                         {/* <p><b>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general</b></p> */}
-                                        <p className="font-weight-200">Manama Developments Ltd, steadily growing Real Estate Company is known for its quality and excellence. At present owning a flat in this over crowded city of ours is like dream as the dream home concept is becoming narrow. Even in this narrower concept, we are trying our best to create the dream home and fulfill the demand. The apartments of Manama are truly dynamic. It is our philosophy to fulfill the promises that we make to our clients.<br/><br/>
+                                        <p className="font-weight-200 text-white">Manama Developments Ltd, steadily growing Real Estate Company is known for its quality and excellence. At present owning a flat in this over crowded city of ours is like dream as the dream home concept is becoming narrow. Even in this narrower concept, we are trying our best to create the dream home and fulfill the demand. The apartments of Manama are truly dynamic. It is our philosophy to fulfill the promises that we make to our clients.<br/><br/>
  
                                         Manama Developments Ltd is a emerging enterprise that not only meets the standard of today’s advancing technology but also exceeds them, we are moving forward with a vision of excellence moving construction excellence for ‘’good to great’’ so that Manama is always considered to be extraordinary. As we continue to meet the goals & challenges, we also keep our focus on you are not purchasing our product but also you are become the part of Manama Family.<br/><br/>
 
@@ -133,24 +108,14 @@ class Story6 extends React.Component {
                 </div>
 
                 {/* LOGO SEGMENT */}
-                <div className="section-full bg-gray square_shape2 tm-about2-wrap">
+                <div className="section-full bg-gray tm-about2-wrap">
                     <div className="container" style={{width:'100%'}}>
                         <div className="section-content " >
                             <div className="row" >
                                 <div className="col-lg-1 col-md-6"></div>
                                 <div className="col-lg-3 col-md-6">
-                                    <div>
-                                    <OwlCarousel className="owl-carousel about-us-carousel" {...options}>
-                                        {images.map((item, index) => (
-                                            <div className="item" key={index}>
-                                            <div className="ow-img wt-img-effect zoom-slow">
-                                            <NavLink to={""}><img src={item.default} alt="" /></NavLink>
-                                                </div>
-                                            </div>
-
-                                        ))}
-
-                                    </OwlCarousel>
+                                    <div className="p-tb50">
+                                    <NavLink to={""}><img src={img2.default} alt="" style={imageBg2}/></NavLink>
                                     </div>
                                 </div>
                                 <div className="col-lg-1 col-md-6"></div>
@@ -177,4 +142,4 @@ class Story6 extends React.Component {
     }
 };
 
-export default Story6;
+export default Story;

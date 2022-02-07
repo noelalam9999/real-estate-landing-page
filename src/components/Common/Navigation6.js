@@ -61,7 +61,7 @@ class Navigation extends React.Component {
                                 <li><NavLink to={"/management-team"}>Management Team</NavLink></li>
                                 <li><NavLink to={"/companies"}>Companies</NavLink></li>
                                 <li><NavLink to={"/ourclient"}>Our Clients</NavLink></li>
-                                <li><NavLink to={"/contactus"}>CSR</NavLink></li>
+                                <li><NavLink to={"/csr"}>CSR</NavLink></li>
                             </ul>
                         </li>
                         <li>
@@ -73,7 +73,7 @@ class Navigation extends React.Component {
                             </ul>
                         </li>
                         <li>
-                            <NavLink to={"#"}>News & Events</NavLink>
+                            <NavLink to={"/news-events"}>News & Events</NavLink>
                             {/* <ul className="sub-menu v-sub-menu">
                                 <li><NavLink to={"/work-grid"}>Grid</NavLink></li>
                                 <li><NavLink to={"/work-masonary"}>Masonry</NavLink></li>
@@ -93,10 +93,10 @@ class Navigation extends React.Component {
                         <li>
                             <NavLink to={"#"}>Contact</NavLink>
                             <ul className="sub-menu v-sub-menu">
-                                <li><NavLink to={"/news-grid"}>Land Owners</NavLink></li>
-                                <li><NavLink to={"/news-listing"}>Buyers</NavLink></li>
-                                <li><NavLink to={"/news-masonary"}>Customers</NavLink></li>
-                                <li><NavLink to={"/news-masonary"}>Contacts</NavLink></li>
+                                <li><NavLink to={"/landowner"}>Land Owners</NavLink></li>
+                                <li><NavLink to={"/buyers"}>Buyers</NavLink></li>
+                                <li><NavLink to={"/customers"}>Customers</NavLink></li>
+                                <li><NavLink to={"/contact-us"}>Contact Us</NavLink></li>
                             </ul>
                         </li>
                     </ul>
