@@ -33,34 +33,21 @@ class VideoInsta extends React.Component {
                             {/* TITLE END */}
                             <div className="row">
                                 
-                                <div className="col-md-6 col-sm-12">
-                                <div className="section-head text-left">
-                                <h2 className="text-uppercase font-36">Latest Blog</h2>
+                                <div className="col-md-12 col-sm-12">
+                                <div className="section-head text-center">
+                                <h2 className="text-uppercase font-36">Youtube</h2>
                                 <div className="wt-separator-outer">
                                     <div className="wt-separator bg-black" />
                                 </div>
                                             </div>
-                                            <div className="m-b30">
+                                            <div style={{margin:"0 auto"}} className="m-b30">
                                                 {/* TITLE START */}
-                                                <div className="section-head">
-                                              
-                                                </div>
+                                                
                                                 {/* TITLE END */}
-                                                <iframe src="https://www.youtube.com/embed/fafEHMnFe3g" width={560} height={315} />
+                                                <iframe src="https://www.youtube.com/embed/nhG-I-KV9ug" width={500} height={435} />
                                             </div>
                                 </div>
-                                <div className="col-md-6 col-sm-12">
-                                <div className="section-head text-left">
-                                <h2 className="text-uppercase font-36">Latest Blog</h2>
-                                <div className="wt-separator-outer">
-                                    <div className="wt-separator bg-black" />
-                                </div>
-                            </div>
-                                    <div className="overlay-wraper bg-no-repeat bg-cover height-315px m-b30" style={{ backgroundImage: 'url(' + featuredblog.default + ')' }}>
-                                      
-                                     
-                                    </div>
-                                </div>
+                             
                             </div>
                         </div>
                     </div>

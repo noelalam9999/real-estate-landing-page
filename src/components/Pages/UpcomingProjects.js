@@ -12,7 +12,7 @@ class UpcomingProjects extends React.Component {
             <>
                 <Header6 />
                 <div className="page-content">
-                    <Slider6/>
+                 
                     <UpcomingProjGrid />
                 </div>
 

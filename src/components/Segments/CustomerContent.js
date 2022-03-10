@@ -18,7 +18,14 @@ var img1 = require('./../../images/gallery/portrait/pic1.jpg');
 var img2 = require('./../../images/gallery/portrait/pic3.jpg');
 
 class CustomerContent extends React.Component {
-    
+    constructor(props) {
+        super(props)
+        this.myRef = React.createRef()  
+    }
+    componentDidMount () {
+        
+        this.myRef.current.scrollIntoView({ behavior: 'smooth' })
+      }
     render() {
         return (
             <>
@@ -34,12 +41,12 @@ class CustomerContent extends React.Component {
                                 </div>
                             </div>
                             <div className="col-lg-1 col-md-6"></div>
-                            <div className="col-lg-6 col-md-6 " >
+                            <div  className="col-lg-6 col-md-6 " >
                                 <div className="m-about-containt text-uppercase text-black p-t30">
                                     {/* <span className="font-30 font-weight-300">About Us</span> */}
                                     <h2 className="text-white font-40">Customers</h2>
                                     {/* <p><b>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general</b></p> */}
-                                    <p className="font-weight-200">We continuously strive to ensure your comfort and satisfaction, which is why we value every feedback from your end. For any customer service or FMS related inquiries regarding your apartment or commercial space, please get in touch at:<br/><br/>
+                                    <p ref={this.myRef} className="font-weight-200">We continuously strive to ensure your comfort and satisfaction, which is why we value every feedback from your end. For any customer service or FMS related inquiries regarding your apartment or commercial space, please get in touch at:<br/><br/>
 
                                     Email: info@manamadevelopments.com<br/><br/>
                                     </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header6 from '../Common/Header6';
 import Footer6 from '../Common/Footer6';
-import Slider6 from '../Segments/Slider6';
+import Slider from '../Segments/SliderSingle';
 import Story6 from '../Segments/Story6';
 
 var bnrimg = require('./../../images/banner/3.jpg');
@@ -12,7 +12,7 @@ class OurStory extends React.Component {
             <>
                 <Header6 />
                 <div className="page-content">
-                    <Slider6/>
+                    <Slider/>
                     <Story6 />
                 </div>
 

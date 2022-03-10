@@ -11,26 +11,7 @@ class GoogleMap extends React.Component {
     render() {
         return (
             <>
-                <Header2 />
-                <div className="page-content">
-                    <Banner title="Design can change the world." pagename="Google map" bgimage={bnrimg.default} />
-
-                    {/* SECTION CONTENTG START */}
-                    <div className="section-full p-tb80 tm-shortcode-wrap">
-                        {/* LOCATION BLOCK*/}
-                        <div className="container">
-                            <div className="row">
-                                <SidebarNav />
-                                <div className="col-md-9 col-sm-9">
-                                    <div className="m-b0">
-                                        {/* TITLE START */}
-                                        <div className="section-head">
-                                            <h3>Google Map</h3>
-                                            <div className="wt-separator-outer">
-                                                <div className="wt-separator bg-black" />
-                                            </div>
-                                        </div>
-                                        {/* TITLE END */}
+      
                                         <div className="section-content">
                                             <div className="banner-map">
                                                 <GoogleMaps
@@ -42,15 +23,7 @@ class GoogleMap extends React.Component {
                                                 />
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* SECTION CONTENT END */}
-                </div>
-
-                <Footer />
+                                   
             </>
         );
     };

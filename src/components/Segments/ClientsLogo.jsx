@@ -5,12 +5,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const logos = [
-    { image: require('./../../images/client-logo/w1.png') },
-    { image: require('./../../images/client-logo/w2.png') },
-    { image: require('./../../images/client-logo/w3.png') },
-    { image: require('./../../images/client-logo/w4.png') },
-    { image: require('./../../images/client-logo/w5.png') },
-    { image: require('./../../images/client-logo/w6.png') },
+    { image: require('./../../images/client-logo/1.jpg') },
+    { image: require('./../../images/client-logo/2.jpg') },
 
 ]
 
@@ -54,7 +50,7 @@ class ClientsLogo extends React.Component {
                                                     <div className="item" key={index}>
                                                         <div className="ow-client-logo">
                                                             <div className="client-logo client-logo-media">
-                                                                <NavLink to={"aboutus"}><img src={item.image.default} alt="" /></NavLink></div>
+                                                             <img src={item.image.default} alt="" /></div>
                                                         </div>
                                                     </div>
                                                 ))}

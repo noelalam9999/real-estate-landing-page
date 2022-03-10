@@ -10,7 +10,17 @@ const imageBg = {
 var img1 = require('./../../images/gallery/portrait/pic1.jpg');
 
 class LandownerContent extends React.Component {
+    
+    constructor(props) {
+        super(props)
+        this.myRef = React.createRef()  
+    }
+    componentDidMount () {
+        
+        this.myRef.current.scrollIntoView({ behavior: 'smooth' })
+      }
     render() {
+       
         return (
             <>
                 <div className="section-full square_shape2 tm-about2-wrap">
@@ -42,7 +52,7 @@ class LandownerContent extends React.Component {
                     </div>
 
                 {/* form SEGMENT */}
-                <div className='flexContainer'>
+                <div  className='flexContainer'>
                 <div className='flexleft'>
                         <div className="comment-respond bg-gray p-a30" id="respond" style={{width:"100%"}}>  
                         <h1 className="font-weight-400 text-uppercase">Meet the Professionals</h1>                          
@@ -51,7 +61,7 @@ class LandownerContent extends React.Component {
                             <NavLink to={""} style={{ display: 'none' }} href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</NavLink>
                         </small>
                         </h2>
-                        <form className="form" action="" id="commentform" method="post">
+                        <form  className="form" action="" id="commentform" method="post">
                             <p className="comment-form-author">
                                 <label htmlFor="location">Preferred Location<span className="required">*</span></label>
                                 <input className="form-control" type="text" defaultValue={""} name="location" placeholder="Enter your preferred location/neighborhodd" id="location" />
@@ -68,7 +78,7 @@ class LandownerContent extends React.Component {
                                 <label htmlFor="date">Expected Handover Date</label>
                                 <input className="form-control" name="date" placeholder="Enter your expected handover date" id="date" defaultValue={""} />
                             </p>
-                            <h2 className="font-weight-400" id="reply-title">B. Other Preferences
+                            <h2 ref={this.myRef} className="font-weight-400" id="reply-title">B. Other Preferences
                             <small>
                                 <NavLink to={""} style={{ display: 'none' }} href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</NavLink>
                             </small>

@@ -3,7 +3,7 @@ import Header6 from '../Common/Header6';
 import Footer6 from '../Common/Footer6';
 import Slider6 from '../Segments/Slider6';
 import Card from '../Segments/Card';
-
+import PageTitleBlog from '../Segments/Blog/PageTitleBlog';
 var bnrimg = require('./../../images/banner/3.jpg');
 
 class NewsEvents extends React.Component {
@@ -12,8 +12,8 @@ class NewsEvents extends React.Component {
             <>
                 <Header6 />
                 <div className="page-content">
-                    <Slider6/>
-                    <Card />
+                <PageTitleBlog title="News and Events" tagline="Our Footprint" />
+                    <Card type="grid" sidebar/>
                 </div>
 
                 <Footer6 />

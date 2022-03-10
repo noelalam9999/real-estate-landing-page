@@ -12,84 +12,97 @@ const projects = [
         title: 'Rapa Plaza',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-2'
+        filter: 'cat-2',
+        slug:"rapa-plaza"
+        
     },
     {
         image: require('./../../images/gallery/portrait/pic2.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic3.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-2'
+        filter: 'cat-2',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic4.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic5.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic6.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic7.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-2'
+        filter: 'cat-2',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic1.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-2'
+        filter: 'cat-2',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic2.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic3.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-2'
+        filter: 'cat-2',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic4.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     },
     {
         image: require('./../../images/gallery/portrait/pic5.jpg'),
         title: 'Triangle Concrete House on lake',
         location: 'Dhanmondi',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'cat-1'
+        filter: 'cat-1',
+        slug:"manama-aranya"
     }
 ]
 
@@ -151,15 +164,16 @@ class OngoingProjGrid extends React.Component {
                                 <div className="row">
                                     {projects.map((item, index) => (
                                         <div key={index} className={`${item.filter} masonry-item col-lg-4 col-md-6 col-sm-6 m-tb0 p-lr0`}>
-                                            <div className="wt-img-effect zoom">
-                                                <img src={item.image.default} alt="" style={{height:'650px'}} />
-                                                <div className="overlay-bx-2 m-b80" style={{backgroundColor:'white', height:'80px'}}>                                                    
-                                                    <div className="text-black font-weight-600 p-a20">
-                                                        <span><NavLink to={"/project-detail"} className="text-black font-20 letter-spacing-1 text-uppercase">{item.title}</NavLink></span>
+                                               <div className="wt-img-effect">
+                                            <img src={item.image.default} alt="" style={{position:"relative",height:'650px'}} />
+                                                {/* <div className="overlay-bx-2 m-b80" style={{marginBottom:"80px",position:"absolute",zIndex:"1",backgroundColor:'black', height:'80px'}}> */}
+                                              
+                                                    <div className="text-white font-weight-500 p-a20" style={{zIndex:"3",backgroundColor:'black', height:'80px'}}>
+                                                        <span><NavLink to={"/project_detail/"+item.slug} className="font-18 letter-spacing-1 text-uppercase ">{item.title}</NavLink></span>
                                                         <br/><span>{item.location}</span>
                                                         {/* <NavLink to={"/project-detail"} className="v-button letter-spacing-4 font-12 text-uppercase p-lr20 text-white" style={{backgroundColor:'cadetblue'}}>Read More</NavLink> */}
                                                     </div>
-                                                </div>
+                                                {/* </div> */}
                                             </div>
                                         </div>
                                     ))}

@@ -3320,6 +3320,8 @@ ol.comment-list li.comment .comment-respond .comment-form p {	padding:0 15px !im
 	2. without top bar
 -------------------------------------*/ 
 .extra-nav { display:table; float:right;  height:70px; position:relative; z-index:9;}
+.extra-nav2 { display:table; float:right;  height:20px; position:relative; z-index:9;}
+.bg-grey{background-color: #F3F3f3; }
 .extra-nav .extra-cell{ display:table-cell; padding-left:10px; vertical-align:middle;}
 
 /*-------------------------------------
@@ -5948,6 +5950,10 @@ New Menu Style for mobile device (august/2021)
 
 @media  only screen and (max-width:736px) {
 	#welcome_wrapper .tp-caption.rev_row{padding: 0px !important;}
+	
+.height-315px{
+	height:170px!important;
+	}
 }
 .top-100px{
 padding-top:100px;
@@ -5957,3 +5963,75 @@ padding-bottom:100px;
 .height-315px{
 height:315px;
 }
+.overlay-tx-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+ 
+    opacity: 0;
+
+    transition: all 0.5s linear;
+}
+
+.whatsapp_float {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 60px;
+	right: 15px;
+	background-color: #ffffff;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 100;
+	
+
+  }
+  
+  .whatsapp-icon {
+	margin-top: 12px;
+	color:green
+  }
+  
+  /* for mobile */
+  @media screen and (max-width: 767px) {
+	.whatsapp-icon {
+		margin-top: 12px;
+	}
+  
+	.whatsapp_float {
+		width: 70px;
+		height: 70px;
+		bottom: 60px;
+		right: 15px;
+		font-size: 50px;
+
+	
+	}
+
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+	background-color: #04AA6D;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+
+  @media screen and (max-width:500px){
+	#parent{
+	  display:flex;
+	  flex-flow: column;
+	}
+	#a{order:2;}
+	#c{order:1;}
+	#b{order:3;}
+  }

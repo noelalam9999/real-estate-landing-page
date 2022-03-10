@@ -3,73 +3,73 @@ import { NavLink } from 'react-router-dom';
 
 const projects = [
     {
-        image: require('./../../images/gallery/portrait/pic1.jpg'),
+        image: require('./../../images/gallery/portrait/logo1.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-1'
     },
     {
-        image: require('./../../images/gallery/portrait/pic2.jpg'),
+        image: require('./../../images/gallery/portrait/logo2.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-2'
     },
     {
-        image: require('./../../images/gallery/portrait/pic3.jpg'),
+        image: require('./../../images/gallery/portrait/logo3.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-3'
     },
     {
-        image: require('./../../images/gallery/portrait/pic4.jpg'),
+        image: require('./../../images/gallery/portrait/logo4.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-4'
     },
     {
-        image: require('./../../images/gallery/portrait/pic5.jpg'),
+        image: require('./../../images/gallery/portrait/logo5.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-5'
     },
     {
-        image: require('./../../images/gallery/portrait/pic6.jpg'),
+        image: require('./../../images/gallery/portrait/logo6.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-4'
     },
     {
-        image: require('./../../images/gallery/portrait/pic7.jpg'),
+        image: require('./../../images/gallery/portrait/logo7.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-3'
     },
     {
-        image: require('./../../images/gallery/portrait/pic1.jpg'),
+        image: require('./../../images/gallery/portrait/logo1.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-2'
     },
     {
-        image: require('./../../images/gallery/portrait/pic2.jpg'),
+        image: require('./../../images/gallery/portrait/logo2.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-1'
     },
     {
-        image: require('./../../images/gallery/portrait/pic3.jpg'),
+        image: require('./../../images/gallery/portrait/logo3.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-1'
     },
     {
-        image: require('./../../images/gallery/portrait/pic4.jpg'),
+        image: require('./../../images/gallery/portrait/logo4.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-1'
     },
     {
-        image: require('./../../images/gallery/portrait/pic5.jpg'),
+        image: require('./../../images/gallery/portrait/logo5.png'),
         title: 'Triangle Concrete House on lake',
         description: 'Morbi mattis ex non urna condimentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
         filter: 'cat-1'
@@ -127,17 +127,11 @@ class ClientGrid extends React.Component {
                                 <div className="row">
                                     {projects.map((item, index) => (
                                         <div key={index} className={`${item.filter} masonry-item col-lg-3 col-md-6 col-sm-6 m-b30`}>
-                                            <div className="wt-img-effect ">
-                                                <img src={item.image.default} alt="" style={{height:'220px'}} />
-                                                <div className="overlay-bx-2 ">
-                                                    <div className="line-amiation">
-                                                        <div className="text-white font-weight-300 p-a40">
-                                                            <h2><NavLink to={"/project-detail"} className="text-white font-20 letter-spacing-1 text-uppercase">{item.title}</NavLink></h2>
-                                                            <p>{item.description}</p>
-                                                            <NavLink to={"/project-detail"} className="v-button letter-spacing-4 font-12 text-uppercase p-l20">Read More</NavLink>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div className="wt-img-effect bg-grey ">
+                                                <img src={item.image.default} alt="" style={{height:'200px'}} />
+                                              
+                                                
+                                              
                                             </div>
                                         </div>
                                     ))}

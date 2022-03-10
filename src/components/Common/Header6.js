@@ -53,7 +53,43 @@ class Header2 extends React.Component {
         const isMenuActive = this.state.isMenuActive;
 
         return (
-            <>  
+            <>   <header className="site-header header-style-1  nav-wide mobile-responsive-navigation">
+            <div className="sticky-header main-bar-wraper">
+                <div className="bg-grey ">
+                    <div className="container">
+                    
+                        {/* ETRA Nav */}
+                      
+                  
+                        <div  className="extra-nav2 header-top-info">
+                            <div className="extra-cell">
+                                <div className="wt-topbar-right clearfix top-bar">
+                                    <ul className="social-bx list-inline pull-right">
+                                        <li><a rel="noreferrer" target="_blank" href="https://www.facebook.com" className="fa fa-facebook" /></li>
+                                        <li><a rel="noreferrer" target="_blank" href="https://twitter.com" className="fa fa-twitter" /></li>
+                                        <li><a rel="noreferrer" target="_blank" href="https://in.linkedin.com" className="fa fa-linkedin" /></li>
+                                        <li><a rel="noreferrer" target="_blank" href="https://rss.com" className="fa fa-rss" /></li>
+                                        <li><a rel="noreferrer" target="_blank" href="https://www.youtube.com/" className="fa fa-youtube" /></li>
+                                        <li><a rel="noreferrer" target="_blank" href="https://www.instagram.com/" className="fa fa-instagram" /></li>
+                                    </ul>
+                                    <ul className="list-unstyled list-inline e-p-bx pull-right">
+                                        <li><i className="fa fa-envelope" />Info@gmail.com</li>
+                                        <li><i className="fa fa-phone" />(654) 123-4567</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {/* ETRA Nav */}
+                     
+                        {/* SITE Search */}
+                       
+                        {/* STYLE SWITCHER  ======= */}
+                     
+                        {/* STYLE SWITCHER END ==== */}
+                    </div>
+                </div>
+            </div>
+        </header>
                 <header className={`${isMenuActive ? "active" : null} site-header header-style-1  nav-wide mobile-responsive-navigation`}>
                     <div className="sticky-header main-bar-wraper">
                         <div className="main-bar bg-white p-t10">

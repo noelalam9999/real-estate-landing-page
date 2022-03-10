@@ -1,0 +1,156 @@
+.img-fluid, .img-thumbnail {
+    height: auto;
+    max-width: 100%;
+}
+
+.post .post-img {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.post-info {
+    background: #212121;
+    padding: 40px;
+    transition: all .2s ease;
+}
+
+.img-fluid, .img-thumbnail {
+    height: auto;
+    max-width: 100%;
+}
+
+
+element.style {
+}
+.post .post-img img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all .5s ease;
+    z-index: 0;
+}
+
+.post-info {
+    background: #212121;
+    padding: 40px;
+    transition: all .2s ease;
+}
+.post-info a {
+    color: #fff;
+}
+
+.post-info h6 {
+    color: greenyellow;
+    font-size: 14px;
+}
+.post-info p {
+    color: #fff;
+    margin-top: 20px;
+}
+.full-width, .img-fluid {
+    width: 100%;
+}
+
+.post .post-img {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+.img-fluid, .img-thumbnail {
+    height: auto;
+    max-width: 100%;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.blog-cover-bg {
+    background-image: url("https://res.cloudinary.com/american-international-university-bangladesh/image/upload/v1644869301/mentoring_ynusan.jpg");
+}
+.title-hero-bg {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    position: relative;
+}
+.title-hero-bg:before {
+    background-color: rgba(0,0,0,.6);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.page-title h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 0;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.white-color, .white-color h1, .white-color h2, .white-color h3, .white-color h4, .white-color h5, .white-color h6, .white-color p {
+    color: #fff!important;
+}
+.page-title {
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 15;
+}
+
+@media (min-width: 768px)
+{.offset-md-1 {
+    margin-left: 8.3333333333%;
+}}
+
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    margin-bottom: 45px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.widget_archive ul li, .widget_categories ul li {
+    line-height: 25px;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.blog-standard {
+    margin-top: 20px;
+}
+
+.post-tags a {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #888;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 5px 15px 0;
+    padding: 5px 11px;
+}
+
+.post-controls {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.post-controls .post-share {
+    float: left;
+}
+.post-share li {
+    display: inline-block;
+    margin: 0;
+    padding-right: 10px;
+}

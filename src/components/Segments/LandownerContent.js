@@ -11,6 +11,15 @@ const imageBg = {
 var img1 = require('./../../images/gallery/portrait/pic1.jpg');
 
 class LandownerContent extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.myRef = React.createRef()  
+    }
+    componentDidMount () {
+        
+        this.myRef.current.scrollIntoView({ behavior: 'smooth' })
+      }
     render() {
         return (
             <>
@@ -57,7 +66,7 @@ class LandownerContent extends React.Component {
                                     <label htmlFor="name">Name of the Landowner<span className="required">*</span></label>
                                     <input className="form-control" type="text" defaultValue={""} name="name" placeholder="Full name of the registered landowner" id="name" />
                                 </p>
-                                <p className="comment-form-email">
+                                <p  className="comment-form-email">
                                     <label htmlFor="contactperson">Contact Person <span className="required">*</span></label>
                                     <input className="form-control" type="text" defaultValue={""} name="contactperson" placeholder="Name (if different from the landowner)" id="contactperson" />
                                 </p>
@@ -72,7 +81,7 @@ class LandownerContent extends React.Component {
                             </form>
                             </div>       
                         </div>
-                    <div className='flexright'>
+                    <div ref={this.myRef} className='flexright'>
                         <div className="comment-respond bg-gray p-a30" id="respond" style={{width:"100%"}}>                            
                             <h2 className="font-weight-400" id="reply-title">Landowners Profile
                             <small>

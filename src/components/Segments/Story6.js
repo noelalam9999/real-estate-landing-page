@@ -15,8 +15,8 @@ const imageBg2 = {
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)'
   }
 var img1 = require('./../../images/gallery/portrait/pic1.jpg');
-var img2 = require('./../../images/gallery/portrait/pic3.jpg');
-
+var img2 = require('./../../images/gallery/portrait/4.jpg');
+var img3 = require('./../../images/manama-logo-vertical.png');
 class Story extends React.Component {
     
     render() {
@@ -34,9 +34,9 @@ class Story extends React.Component {
                                     <div className="col-lg-6 col-md-6 " >
                                         <div className="m-about-containt text-uppercase text-black p-t30">
                                             {/* <span className="font-30 font-weight-300">About Us</span> */}
-                                            <h2 className="font-40">BACKGROUND</h2>
+                                            <h2 className="font-40">How we created</h2>
                                             {/* <p><b>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general</b></p> */}
-                                            <p className="font-weight-200">Manama Group started its journey as a trading company in 1970. Md. Aynul Haque, founder of the company engaged with trading business with the maximum rate of success. The main importing commodities of the group is fertilizer, coal, wheat, cotton yarn, corn, rice and sugar from all around the world. Its main objective is to fulfill local markets demand at the lowest possible price with the best quality.<br/><br/>
+                                            <p className="font-weight-200">MManama Group started its journey as a trading company in 1970. Md. Aynul Haque, founder of the company engaged with trading business with the maximum rate of success. The main importing commodities of the group is fertilizer, coal, wheat, cotton yarn, corn, rice and sugar from all around the world. Its main objective is to fulfill local markets demand at the lowest possible price with the best quality.<br/><br/>
 
                                             In 1996 a cement industry under the name of A.R. cement mill Ltd. was founded. A.R. cement mills Ltd. manufactures one of the finest quality cement in Bangladesh.<br/><br/>  
 
@@ -115,7 +115,7 @@ class Story extends React.Component {
                                 <div className="col-lg-1 col-md-6"></div>
                                 <div className="col-lg-3 col-md-6">
                                     <div className="p-tb50">
-                                    <NavLink to={""}><img src={img2.default} alt="" style={imageBg2}/></NavLink>
+                                    <NavLink to={""}><img src={img3.default} alt="" /></NavLink>
                                     </div>
                                 </div>
                                 <div className="col-lg-1 col-md-6"></div>

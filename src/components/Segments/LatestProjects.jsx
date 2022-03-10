@@ -5,59 +5,47 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const filters = [
-    { label: "Building", filter: ".building-col" },
-    { label: "Interior", filter: ".interior-col" },
-    { label: "Restaurant", filter: ".restaurant-col" }
+    { label: "Completed", filter: ".building-col" },
+    { label: "Ongoing", filter: ".ongoing" },
+    { label: "Upcoming", filter: ".upcoming" }
 ];
 
 const projects = [
     {
-        image: require('./../../images/gallery/portrait/pic1.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'building-col'
+        image: require('./../../images/gallery/portrait/4.jpg'),
+        title: 'Manama Tower',
+        description: 'Gulshan',
+        filter: 'ongoing',
+        slug:"manama-tower",
+        
     },
     {
-        image: require('./../../images/gallery/portrait/pic2.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'building-col'
+        image: require('./../../images/gallery/portrait/1.jpg'),
+        title: 'Manama Urban Forest',
+        description: 'Banani',
+        filter: 'building-col',
+        slug:"manama-urban-forest",
     },
     {
-        image: require('./../../images/gallery/portrait/pic3.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'building-col'
+        image: require('./../../images/gallery/portrait/2.jpg'),
+        title: 'Manama Dew Drop',
+        description: 'Banani',
+        filter: 'building-col',
+        slug:"manama-dew-drop",
     },
     {
-        image: require('./../../images/gallery/portrait/pic4.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'building-col'
+        image: require('./../../images/gallery/portrait/3.jpg'),
+        title: 'Manama Shahnara Domicile',
+        description: 'Banani',
+        filter: 'ongoing',
+        slug:"manama-shahanara-domicile",
     },
     {
-        image: require('./../../images/gallery/portrait/pic5.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'interior-col'
-    },
-    {
-        image: require('./../../images/gallery/portrait/pic6.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'restaurant-col'
-    },
-    {
-        image: require('./../../images/gallery/portrait/pic7.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'restaurant-col'
-    },
-    {
-        image: require('./../../images/gallery/portrait/pic4.jpg'),
-        title: 'Triangle Concrete House on lake',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'interior-col'
+        image: require('./../../images/gallery/portrait/5.jpg'),
+        title: 'Rapa Plaza',
+        description: 'Dhanmondi',
+        filter: 'building-col',
+        slug:"rapa-plaza",
     }
 ]
 
@@ -84,7 +72,7 @@ class LatestProjects extends React.Component {
     };
     render() {
         const options = {
-            loop:false,
+            loop: true,
             autoplay:true,
             margin:20,
             nav:true,
@@ -124,19 +112,19 @@ class LatestProjects extends React.Component {
                         <div className="section-head text-left">
                             <div className="row">
                                 <div className="col-lg-4 col-md-12 ">
-                                    <h2 className="text-uppercase font-36">Latest Project</h2>
+                                    <h2 className="text-uppercase font-36">Ongoing Projects</h2>
                                     <div className="wt-separator-outer">
                                         <div className="wt-separator bg-black" />
                                     </div>
                                 </div>
-                                <div className="col-lg-8 col-md-12">
+                                {/* <div className="col-lg-8 col-md-12">
                                     <ul className="btn-filter-wrap">
                                         <li className="btn-filter btn-active" data-filter="*">All Project</li>
                                         {filters.map((item, index) => (
                                             <li key={index} className="btn-filter" data-filter={item.filter}>{item.label}</li>
                                         ))}
                                     </ul>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         {/* TITLE END */}
@@ -146,13 +134,18 @@ class LatestProjects extends React.Component {
                                         {projects.map((item, index) => (
                                             <div key={index} className={`${item.filter} item fadingcol`}>
                                                 <div className="wt-img-effect ">
-                                                    <img src={item.image.default} alt="" />
+                                                    <img src={item.image.default} style={{position:"relative"}} alt="" />
+                                                    <div className="font-weight-500 p-a20" style={{backgroundColor:'black', height:'80px'}}>
+                                                        <span className="font-18 letter-spacing-1 text-uppercase" style={{color:"white"}}>{item.title}</span>
+                                                        <br/><span className="font-13 letter-spacing-1 text-uppercase" style={{color:"white"}} >{item.description}</span>
+                                                        {/* <NavLink to={"/project-detail"} className="v-button letter-spacing-4 font-12 text-uppercase p-lr20 text-white" style={{backgroundColor:'cadetblue'}}>Read More</NavLink> */}
+                                                    </div>
                                                     <div className="overlay-bx-2 ">
                                                         <div className="line-amiation">
                                                             <div className="text-white  font-weight-300 p-a40">
-                                                                <h2><NavLink to={"/project-detail"} className="text-white font-20 letter-spacing-1 text-uppercase">{item.title}</NavLink></h2>
+                                                                <h2><NavLink to={"/project-detail/"+item.slug} className="text-white font-20 letter-spacing-1 text-uppercase">{item.title}</NavLink></h2>
                                                                 <p>{item.description}</p>
-                                                                <NavLink to={"/project-detail"} className="v-button letter-spacing-4 font-12 text-uppercase p-l20">Read More</NavLink>
+                                                                <NavLink to={"/project-detail/"+item.slug} className="v-button letter-spacing-4 font-12 text-uppercase p-l20">Read More</NavLink>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -161,10 +154,7 @@ class LatestProjects extends React.Component {
                                         ))}
                                     </OwlCarousel>
                         </div>
-                        <div className="hilite-title p-lr20 m-tb20 text-right text-uppercase bdr-gray bdr-right">
-                            <strong>Awesome</strong>
-                            <span className="text-black">Designs</span>
-                        </div>
+                   
                     </div>
             </>
         );

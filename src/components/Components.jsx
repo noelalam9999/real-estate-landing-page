@@ -16,11 +16,11 @@ import MessageBOD from './Pages/MessageBOD';
 import ManagementTeam from './Pages/ManagementTeam';
 import Companies from './Pages/Companies';
 import OurClient from './Pages/OurClients';
-
+import Career from './Pages/Career'
 import OngoingProjects from './Pages/OngoingProjects';
 import UpcomingProjects from './Pages/UpcomingProjects';
 import CompletedProjects from './Pages/CompletedProjects';
-
+import ProjectDetail6 from './Pages/ProjectDetails6';
 import NewsEvents from './Pages/NewsEvents';
 
 import Landowner from './Pages/Landowner';
@@ -52,7 +52,8 @@ import PricingTable from './Pages/PricingTable';
 import Tabs from './Pages/Tabs';
 import Table from './Pages/Table';
 import Video from './Pages/Video'
-
+import BlogStandard from './Segments/Blog/BlogStandard';
+import Gallery from './Pages/Gallery';
 class Components extends React.Component {
     render() {
         return (
@@ -73,7 +74,7 @@ class Components extends React.Component {
                             <Route path='/board-of-directors' exact component={BoardOfDirectors}/>
                             <Route path='/message-from-board-of-directors' exact component={MessageBOD}/>
                             <Route path='/management-team' exact component={ManagementTeam}/>
-                            <Route path='/companies' exact component={Companies}/>
+                            <Route path='/projects' exact component={Companies}/>
                             <Route path='/ourclient' exact component={OurClient}/>
 
 
@@ -82,17 +83,20 @@ class Components extends React.Component {
                             <Route path='/completed-projects' exact component={CompletedProjects} />
                             
                             <Route path='/news-events' exact component={NewsEvents} />
+                            <Route path='/gallery' exact component={Gallery} />
                             <Route path='/landowner' exact component={Landowner} />
                             <Route path='/buyers' exact component={Buyers} />
+                            <Route path='/career' exact component={Career} /> 
                             <Route path='/contact-us' exact component={ContactUs6} /> 
                             <Route path='/customers' exact component={Customer6} /> 
                             <Route path='/completed-projects' exact component={CompletedProjects} />
-
+                            <Route path={`/project-detail/:slug`} exact component={ProjectDetail6} />
+                            <Route path={`/blog/:blogID`} exact component={BlogStandard} />
                             <Route path='/work-grid' exact component={WorkGrid} />
                             <Route path='/work-masonary' exact component={WorkMasonary} />
                             <Route path='/work-carousel' exact component={WorkCarousel} />
-                            <Route path='/project-detail' exact component={ProjectDetail} />
-
+                            {/* <Route path='/project-detail/' exact component={ProjectDetail} /> */}
+                         
                             <Route path='/post-image' exact component={PostImage} />
                             <Route path='/post-gallery' exact component={PostGallery} />
                             <Route path='/post-video' exact component={PostVideo} />

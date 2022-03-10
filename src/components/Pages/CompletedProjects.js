@@ -12,7 +12,7 @@ class CompletedProjects extends React.Component {
             <>
                 <Header6 />
                 <div className="page-content">
-                    <Slider6/>
+             
                     <CompletedProjGrid />
                 </div>
 

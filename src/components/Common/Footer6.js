@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Whatsapp from './Whatspp';
 
 class Footer extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Footer extends React.Component {
                                 <NavLink to={"/"}><img src={require("./../../images/manama-logo.png").default} alt="" width={140} height={58} /></NavLink>
                                 </div>
                                 <div className="col-lg-4 col-md-4 text-center copyright-block p-t15">
-                                    <span className="copyrights-text">© 2022 Designed By thememajestic.</span>
+                                    <span className="copyrights-text">© 2022 Designed By Insighters</span>
                                 </div>
                                 <div className="col-lg-4 col-md-5 wt-footer-bot-right p-t15">
                                     <ul className="copyrights-nav pull-right">
@@ -32,6 +33,7 @@ class Footer extends React.Component {
                                     </ul>
                                 </div>
                             </div>
+              <Whatsapp/>
                         </div>
                     </div>
                 </footer>

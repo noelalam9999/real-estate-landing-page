@@ -1,79 +1,155 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import BlogItemGrid from "./Blog/BlogItemGrid";
+import Pagination from "./Blog/Pagination";
+import BlogWrapper from "./Blog/BlogWrapper";
+import dataPosts from "./Blog/blog-data.json";
+import dataPostsMasonry from "./Blog/blog-masonry-data.json";
+import BlogItemMasonry from "./Blog/BlogItemMasonry";
+import BlogItemSidebar from "./Blog/BlogItemSidebar";
+import SidebarForBlog from "./Blog/SidebarForBlog";
 
-const events = [
-    {
-        image: require('./../../images/gallery/portrait/pic1.jpg'),
-        title: 'Superbrands Award 2020-21',
-        location: 'Mirpur',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'event'
-    },
-    {
-        image: require('./../../images/gallery/portrait/pic2.jpg'),
-        title: 'Luxe Living At Its Best',
-        location: 'Dhanmondi',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'news'
-    },
-    {
-        image: require('./../../images/gallery/portrait/pic3.jpg'),
-        title: 'Training Program On Leadership Excellence And Team Building',
-        location: 'Badda',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'event'
-    },
-    {
-        image: require('./../../images/gallery/portrait/pic4.jpg'),
-        title: 'Luxe Living At Its Best',
-        location: 'Bashundhara R/A',
-        description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-        filter: 'news'
-    },
-    {
-      image: require('./../../images/gallery/portrait/pic5.jpg'),
-      title: 'Training Program On Leadership Excellence And Team Building',
-      location: 'Mirpur',
-      description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-      filter: 'event'
-    },
-    {
-      image: require('./../../images/gallery/portrait/pic6.jpg'),
-      title: 'Luxe Living At Its Best',
-      location: 'Mirpur',
-      description: 'Morbi mattis ex non urna condi mentum, eget eleifend diam molestie. Curabitur lorem enim, maximus non null.',
-      filter: 'news'
-    }
-]
+const Card = ({ type, sidebar }) => {
+  const [posts, setPosts] = useState([]);
+  const [masonryPosts, setMasonryPosts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 6;
 
-class Card extends React.Component {
-    
-    render() {
-        return (
-            <>
-            <div className="portfolio-wrap mfp-gallery work-grid clearfix">
-              <div className="container-fluid">
-                  <div className="row">
-                    {events.map((item, index) => (
-                      <div key={index} className="col-lg-3 col-md-6 col-sm-12 p-tb40 m-a0">
-                          <div className="wt-img-effect">
-                            <img src={item.image.default} alt="" style={{height:'550px'}} />
-                          </div>
-                          <div className="text-black  font-weight-300 p-lr20">
-                            <h2><NavLink to={"/project-detail"} className="text-black font-22 margin-2 letter-spacing-1 text-uppercase">{item.title}</NavLink></h2>
-                            <h4 className="text-black font-16 text-uppercase">{item.location}</h4>
-                            <h6 className="v-button letter-spacing-4 font-12 text-uppercase p-lr20 text-white" style={{backgroundColor:'cadetblue'}}>{item.filter}</h6>
-                            <p>{item.description}</p>
-                            <NavLink to={"/project-detail"} className="v-button letter-spacing-4 font-12 text-uppercase p-l20">Read More</NavLink>
-                          </div>
-                      </div>
-                    ))}
-                  </div>
-              </div>
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const currentMasonryPosts = masonryPosts.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  const page = (e, currentPage) => {
+    e.preventDefault();
+    setCurrentPage(currentPage);
+  };
+
+  useEffect(() => {
+    setPosts(dataPosts);
+    setMasonryPosts(dataPostsMasonry);
+  }, []);
+
+  return (
+    <section
+      className={type === "grid" || type === "masonry" ? "pt-100 pb-100" : "pt-100 pb-100"}
+    >
+      <div className="container">
+        <div className="row">
+          {type === "sidebar-left" ? (
+            <div className="col-md-3">
+              <SidebarForBlog />
             </div>
-            </>
-        );
-    }
+          ) : null}
+          <BlogWrapper type={type}>
+            {type === "masonry"
+              ? currentMasonryPosts.map((post, index) => (
+                  <BlogItemMasonry
+                    key={post.id}
+                    id={post.id}
+                    image={post.image}
+                    title={post.title}
+                    link={post.link ? post.link : null}
+                    slides={post.slides ? post.slides : null}
+                    published={post.published}
+                    excerpt={post.excerpt}
+                    type={post.type}
+                  />
+                ))
+              : currentPosts.map(
+                  (post, index) =>
+                    ({
+                      grid: (
+                        <BlogItemGrid
+                          key={post.id}
+                          id={post.id}
+                          index={index}
+                          firstPost={indexOfFirstPost}
+                          image={post.image}
+                          title={post.title}
+                          link={post.link ? post.link : null}
+                          slides={post.slides ? post.slides : null}
+                          published={post.published}
+                          excerpt={post.excerpt}
+                          type={post.type}
+                        />
+                      ),
+                      sidebar: (
+                        <div className="col-md-6" key={post.id}>
+                          <BlogItemSidebar
+                            blogType="sidebar"
+                            id={post.id}
+                            index={index}
+                            firstPost={indexOfFirstPost}
+                            image={post.image}
+                            title={post.title}
+                            link={post.link ? post.link : null}
+                            slides={post.slides ? post.slides : null}
+                            published={post.published}
+                            excerpt={post.excerpt}
+                            type={post.type}
+                          />
+                        </div>
+                      ),
+                      "sidebar-left": (
+                        <BlogItemSidebar
+                          key={post.id}
+                          id={post.id}
+                          index={index}
+                          firstPost={indexOfFirstPost}
+                          image={post.image}
+                          title={post.title}
+                          link={post.link ? post.link : null}
+                          slides={post.slides ? post.slides : null}
+                          published={post.published}
+                          excerpt={post.excerpt}
+                          type={post.type}
+                        />
+                      ),
+                      "sidebar-right": (
+                        <BlogItemSidebar
+                          key={post.id}
+                          id={post.id}
+                          index={index}
+                          firstPost={indexOfFirstPost}
+                          image={post.image}
+                          title={post.title}
+                          link={post.link ? post.link : null}
+                          slides={post.slides ? post.slides : null}
+                          published={post.published}
+                          excerpt={post.excerpt}
+                          type={post.type}
+                        />
+                      ),
+                    }[type])
+                )}
+          </BlogWrapper>
+          {type === "sidebar-right" || type === "sidebar" ? (
+            <div className="col-md-3 offset-md-1 right-col-rv">
+              <SidebarForBlog />
+            </div>
+          ) : null}
+        </div>
+        {type === "masonry" ? (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={masonryPosts.length}
+            page={page}
+            currentPage={currentPage}
+          />
+        ) : (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            page={page}
+            currentPage={currentPage}
+          />
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default Card;

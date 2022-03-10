@@ -28,28 +28,9 @@ class Navigation extends React.Component {
         return (
             <>
                     <ul className=" nav navbar-nav">
-                        <li className="active">
+                        <li className="">
                             <NavLink to={"/"}>Home</NavLink>
-                            <ul className="sub-menu v-sub-menu">
-                                <li>
-                                    <NavLink to={"./"}>Home-1</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to={"home-2"}>Home-2</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to={"/home-3"}>Home-3</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to={"/home-4"}>Home-4</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to={"/home-5"}>Home-5</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to={"/home-6"}>Home-6</NavLink>
-                                </li>
-                            </ul>
+                         
                         </li>
                         <li>
                             <NavLink to={"#"}>About Us</NavLink>
@@ -59,9 +40,9 @@ class Navigation extends React.Component {
                                 <li><NavLink to={"/board-of-directors"}>Board Of Directors</NavLink></li>
                                 <li><NavLink to={"/message-from-board-of-directors"}>Message from Board Of Directors</NavLink></li>
                                 <li><NavLink to={"/management-team"}>Management Team</NavLink></li>
-                                <li><NavLink to={"/companies"}>Companies</NavLink></li>
-                                <li><NavLink to={"/ourclient"}>Our Clients</NavLink></li>
-                                <li><NavLink to={"/csr"}>CSR</NavLink></li>
+                                <li><NavLink to={"/projects"}>Companies</NavLink></li>
+                           
+                               
                             </ul>
                         </li>
                         <li>
@@ -74,15 +55,14 @@ class Navigation extends React.Component {
                         </li>
                         <li>
                             <NavLink to={"/news-events"}>News & Events</NavLink>
-                            {/* <ul className="sub-menu v-sub-menu">
-                                <li><NavLink to={"/work-grid"}>Grid</NavLink></li>
-                                <li><NavLink to={"/work-masonary"}>Masonry</NavLink></li>
-                                <li><NavLink to={"/work-carousel"}>Carousel</NavLink></li>
-                                <li><NavLink to={"/project-detail"}>Project Detail</NavLink></li>
-                            </ul> */}
+                            <ul className="sub-menu v-sub-menu">
+                                <li><NavLink to={"/news-events"}>News</NavLink></li>
+                                <li><NavLink to={"/gallery"}>Gallery</NavLink></li>
+                          
+                            </ul>
                         </li>
                         <li>
-                            <NavLink to={"#"}>Career</NavLink>
+                            <NavLink to={"/career"}>Career</NavLink>
                             {/* <ul className="sub-menu v-sub-menu">
                                 <li><NavLink to={"/post-image"}>Image</NavLink></li>
                                 <li><NavLink to={"/post-gallery"}>Gallery</NavLink></li>
@@ -94,7 +74,7 @@ class Navigation extends React.Component {
                             <NavLink to={"#"}>Contact</NavLink>
                             <ul className="sub-menu v-sub-menu">
                                 <li><NavLink to={"/landowner"}>Land Owners</NavLink></li>
-                                <li><NavLink to={"/buyers"}>Buyers</NavLink></li>
+                                <li><NavLink to={"/buyers/#respond"}>Buyers</NavLink></li>
                                 <li><NavLink to={"/customers"}>Customers</NavLink></li>
                                 <li><NavLink to={"/contact-us"}>Contact Us</NavLink></li>
                             </ul>
