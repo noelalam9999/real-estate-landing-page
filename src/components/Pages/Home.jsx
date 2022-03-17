@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Common/Header6';
-import Footer from '../Common/Footer6';
+import Footer from '../Common/Footer3';
 import Slider from './../Segments/Slider';
 import Slider2 from './../Segments/Slider-mobile';
 import About from './../Segments/About';
@@ -13,10 +13,12 @@ import Statistics from './../Segments/Statistics';
 import Testimonials from './../Segments/Testimonials';
 import ClientsLogo from './../Segments/ClientsLogo';
 import Highlights from '../Segments/Highlights';
+import MapContainer from '../Segments/Maps';
 import GoogleMaps from "simple-react-google-maps"
 import VideoInsta from '../Segments/Video-Insta';
 import StakeholderCategories from '../Segments/StakeholderCategories';
 import { Suspense, lazy } from 'react';
+import { Map, GoogleApiWrapper } from 'react-google-maps';
 class Home extends React.Component {
    
     getComponent(){
@@ -34,6 +36,7 @@ else{
     
     render() {
         var CompletedProjects = React.lazy(() => import('./../Segments/CompletedProjects'));
+        var UpcomingProjects = React.lazy(() => import('./../Segments/UpcomingProjects'));
         return (
             <>
                 <Header />
@@ -53,8 +56,11 @@ else{
                     <Suspense fallback={<div>Loading</div>}>
                <CompletedProjects/>
                </Suspense>
+               <Suspense fallback={<div>Loading</div>}>
+               <UpcomingProjects/>
+               </Suspense>
                    <Highlights/>
-                   <div className="section-content">
+                   {/* <div className="section-content">
                                             <div className="banner-map">
                                                 <GoogleMaps
                                                     apiKey={"AIzaSyAfY1DRbspf6E3jYUso-PeI_tdfRXA59i0"}
@@ -65,7 +71,8 @@ else{
                                                 
                                                 />
                                             </div>
-                                        </div>
+                                        </div> */}
+                                           <MapContainer  />
                     <VideoInsta colorclass="text-white"/>                    
                  
                     <ClientsLogo />

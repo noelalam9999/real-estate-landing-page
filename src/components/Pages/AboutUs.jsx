@@ -1,6 +1,6 @@
 import React from 'react';
 import Header2 from '../Common/Header2';
-import Footer from '../Common/Footer';
+import Footer from '../Common/Footer3';
 import Banner from './../Segments/Banner';
 import About2 from './../Segments/About2';
 import TeamMembers2 from './../Segments/TeamMembers2';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Header2 from '../Common/Header6';
-import Footer from '../Common/Footer';
+import Footer from '../Common/Footer3';
 import Banner from './../Segments/Banner';
 
 const projects = [

@@ -4,7 +4,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Header2 from '../Common/Header2';
-import Footer from '../Common/Footer';
+import Footer from '../Common/Footer3';
 import Banner from './../Segments/Banner';
 import SidebarNav from './../Segments/SidebarNav';
 

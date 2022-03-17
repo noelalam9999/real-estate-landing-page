@@ -54,7 +54,7 @@ class LandownerContent extends React.Component {
                 {/* form SEGMENT */}
                 <div  className='flexContainer'>
                 <div className='flexleft'>
-                        <div className="comment-respond bg-gray p-a30" id="respond" style={{width:"100%"}}>  
+                        <div className="comment-respond contact-form-padding bg-gray p-a30" id="respond" style={{width:"100%"}}>  
                         <h1 className="font-weight-400 text-uppercase">Meet the Professionals</h1>                          
                         <h2 className="font-weight-400" id="reply-title">A. Your Valued Interest
                         <small>
@@ -103,7 +103,7 @@ class LandownerContent extends React.Component {
                         </div>       
                     </div>
                     <div className='flexright'>
-                        <div className="comment-respond bg-gray p-a30" id="respond" style={{width:"100%"}}>                            
+                        <div className="comment-respond contact-form-padding bg-gray p-a30" id="respond" style={{width:"100%"}}>                            
                             <h2 className="font-weight-400" id="reply-title">C. Contact Information
                             <small>
                                 <NavLink to={""} style={{ display: 'none' }} href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</NavLink>

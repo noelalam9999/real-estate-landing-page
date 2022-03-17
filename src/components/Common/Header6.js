@@ -8,6 +8,9 @@ class Header2 extends React.Component {
         super(props);
         this.state = { logo: require('./../../images/manama-logo.png') };
     }
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll,'true');
+      }
 
     state = { isSearchActive: false, isMenuActive: false };
 
@@ -23,6 +26,15 @@ class Header2 extends React.Component {
         this.setState({ isQuoteActive: !this.state.isQuoteActive });
     };
 
+    handleScroll = (event) => {
+        var heightBound = window.height * 0.8
+        if (heightBound > window.scrollY) {
+            console.log("scrolled")
+          document.getElementsByClassName(".main-bar").style.position = "fixed"
+        } else {
+          document.getElementsByClassName(".main-bar").style.position = "relative";
+        }
+      };
 
     componentDidMount() {
 
@@ -53,7 +65,9 @@ class Header2 extends React.Component {
         const isMenuActive = this.state.isMenuActive;
 
         return (
-            <>   <header className="site-header header-style-1  nav-wide mobile-responsive-navigation">
+            <>  
+          
+             <header className="site-header header-style-1  nav-wide mobile-responsive-navigation">
             <div className="sticky-header main-bar-wraper">
                 <div className="bg-grey ">
                     <div className="container">
@@ -64,14 +78,14 @@ class Header2 extends React.Component {
                         <div  className="extra-nav2 header-top-info">
                             <div className="extra-cell">
                                 <div className="wt-topbar-right clearfix top-bar">
-                                    <ul className="social-bx list-inline pull-right">
+                                    {/* <ul className="social-bx list-inline pull-right">
                                         <li><a rel="noreferrer" target="_blank" href="https://www.facebook.com" className="fa fa-facebook" /></li>
                                         <li><a rel="noreferrer" target="_blank" href="https://twitter.com" className="fa fa-twitter" /></li>
                                         <li><a rel="noreferrer" target="_blank" href="https://in.linkedin.com" className="fa fa-linkedin" /></li>
                                         <li><a rel="noreferrer" target="_blank" href="https://rss.com" className="fa fa-rss" /></li>
                                         <li><a rel="noreferrer" target="_blank" href="https://www.youtube.com/" className="fa fa-youtube" /></li>
                                         <li><a rel="noreferrer" target="_blank" href="https://www.instagram.com/" className="fa fa-instagram" /></li>
-                                    </ul>
+                                    </ul> */}
                                     <ul className="list-unstyled list-inline e-p-bx pull-right">
                                         <li><i className="fa fa-envelope" />Info@gmail.com</li>
                                         <li><i className="fa fa-phone" />(654) 123-4567</li>
@@ -90,14 +104,14 @@ class Header2 extends React.Component {
                 </div>
             </div>
         </header>
-                <header className={`${isMenuActive ? "active" : null} site-header header-style-1  nav-wide mobile-responsive-navigation`}>
+                <header className={`${isMenuActive ? "active" : null} site-header header-style-1 header-fixed nav-wide mobile-responsive-navigation`}>
                     <div className="sticky-header main-bar-wraper">
                         <div className="main-bar bg-white p-t10">
                             <div className="container">
                                 <div className="logo-header">
                                     <div className="logo-header-inner logo-header-one">
                                         <NavLink to={"./"}>
-                                            <img src={this.state.logo.default} width={171} height={49} alt="Modern" />
+                                            <img src={this.state.logo.default} width={250} height={70} alt="Modern" />
                                         </NavLink>
                                     </div>
                                 </div>
@@ -136,7 +150,7 @@ class Header2 extends React.Component {
                     </div>
                 </header>
 
-
+              
             </>
         );
     };

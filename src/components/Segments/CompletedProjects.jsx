@@ -394,7 +394,7 @@ class CompletedProjects extends React.Component {
                         {/* IMAGE CAROUSEL START */}
                         <div className="section-content">
                             <OwlCarousel className="owl-carousel owl-carousel-filter  owl-btn-bottom-left" {...options}>
-                                        {projects.map((item, index) => (
+                                        {projects.slice(0,6).map((item, index) => (
                                             <div key={index} className={`${item.filter} item fadingcol`}>
                                                 <div className="wt-img-effect ">
                                                     <img src={item.image.default}  alt="" />

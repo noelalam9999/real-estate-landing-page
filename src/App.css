@@ -13,6 +13,10 @@
   }
 }
 
+.footer-bg{
+  background-image: url("https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647296027/footer-bd_tlvit7.jpg")!important;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

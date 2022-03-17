@@ -1,6 +1,6 @@
 import React from 'react';
 import Header2 from '../Common/Header2';
-import Footer from '../Common/Footer';
+import Footer from '../Common/Footer3';
 import Banner from './../Segments/Banner';
 import SidebarNav from './../Segments/SidebarNav';
 import CountUp from 'react-countup';

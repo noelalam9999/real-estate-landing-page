@@ -1,6 +1,6 @@
 import React from 'react';
 import Header6 from '../Common/Header6';
-import Footer6 from '../Common/Footer6';
+import Footer6 from '../Common/Footer3';
 import Slider6 from '../Segments/SliderBuyers';
 import BuyersContent from '../Segments/BuyersContent';
 

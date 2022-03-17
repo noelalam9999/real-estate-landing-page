@@ -5,33 +5,33 @@ import CountUp from 'react-countup';
 var bgimg = require('./../../images/background/12.jpg');
 const members = [
     {
-        image: require('./../../images/our-team5/pic1.jpg'),
+        image: require('./../../images/our-team5/pic1.png'),
         fullname: 'David Gray',
         position: 'Co-manager associated',
     },
     {
-        image: require('./../../images/our-team5/pic2.jpg'),
+        image: require('./../../images/our-team5/pic2.png'),
         fullname: 'Taylor Roberts',
         position: 'Co-manager associated',
     },
     {
-        image: require('./../../images/our-team5/pic3.jpg'),
+        image: require('./../../images/our-team5/pic3.png'),
         fullname: 'Robert willson',
         position: 'Co-manager associated',
     },
     {
-        image: require('./../../images/our-team5/pic4.jpg'),
+        image: require('./../../images/our-team5/pic4.png'),
         fullname: 'Austin Evon',
         position: 'Co-manager associated',
     }
     ,
     {
-        image: require('./../../images/our-team5/pic5.jpg'),
+        image: require('./../../images/our-team5/pic5.png'),
         fullname: 'Robert willson',
         position: 'Co-manager associated',
     },
     {
-        image: require('./../../images/our-team5/pic6.jpg'),
+        image: require('./../../images/our-team5/pic6.png'),
         fullname: 'Austin Evon',
         position: 'Co-manager associated',
     }
@@ -66,8 +66,8 @@ class Highlights extends React.Component {
                                             <div className="row">
                                                 {members.map((item, index) => (
                                                     <div className="col-md-4 col-sm-6 col-xs-6 col-xs-70pc m-tb15" key={index}>
-                                                    <div className="wt-team-six bg-white">
-                                                        <div className="wt-team-media wt-thum-bx wt-img-overlay1">
+                                                    <div className="wt-team-six">
+                                                        <div className="wt-team-media wt-img-overlay1">
                                                             <img src={item.image.default} alt=""/>
                                                    
                                                         </div>

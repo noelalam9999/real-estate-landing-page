@@ -54,7 +54,7 @@ class ContactUsContent extends React.Component {
                 {/* form SEGMENT */}
                 <div className='flexContainer'>
                     <div className='flexleft'>
-                        <div className="comment-respond bg-gray p-a30" id="respond" style={{width:"100%"}}>  
+                        <div className="comment-respond contact-form-padding bg-gray p-a30" id="respond" style={{width:"100%"}}>  
                         <h1 className="font-weight-400 text-uppercase">Write to us</h1>                          
                         <form className="form" action="" id="commentform" method="post">
                         <p ref={this.myRef} className="comment-form-author">

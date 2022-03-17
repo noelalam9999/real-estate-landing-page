@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import Whatsapp from './Whatspp';
 class Footer3 extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +13,7 @@ class Footer3 extends React.Component {
 
         return (
             <>
-                <footer className="site-footer footer-large footer-light footer-wide">
+                <footer className="footer-bg site-footer footer-large footer-wide">
                     {/* FOOTER BLOCKES START */}
                     <div className="footer-top overlay-wraper">
                         <div className="overlay-main" />
@@ -24,38 +24,38 @@ class Footer3 extends React.Component {
                                     <div className="widget widget_about">
                                         {/*<h4 class="widget-title">About Company</h4>*/}
                                         <div className="logo-footer clearfix p-b15">
-                                        <NavLink to={"/"}><img src={require("./../../images/logo-dark.png").default} alt="" width={230} height={67} /></NavLink>
+                                        <NavLink to={"/"}><img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647297990/logo-footer_trkfld.png"} alt="" height={300} /></NavLink>
                                             
                                         </div>
-                                        <p>Typefaces and layouts, and in content of dummy text is nonsensical.typefaces of dummy text is appearance of different general the content of dummy text is nonsensical.typefaces of dummy text is nonsensical.
-                                        </p>
+                                      
+                                       
                                     </div>
                                 </div>
                                 {/* RESENT POST */}
                                 <div className="col-lg-3 col-md-6 col-sm-6">
                                     <div className="widget recent-posts-entry">
-                                        <h4 className="widget-title  text-uppercase">Recent Posts</h4>
+                                        <h4 className="widget-title  text-uppercase"></h4>
                                         <div className="section-content">
                                             <div className="widget-post-bx">
                                                 <div className="widget-post clearfix">
                                                     <div className="wt-post-media">
-                                                        <img src={require("./../../images/blog/recent-blog/pic1.jpg").default} alt="" />
+                                                      
                                                     </div>
                                                     <div className="wt-post-info">
                                                         <div className="wt-post-header">
-                                                            <h6 className="post-title"><NavLink to={"/post-right-sidebar"}>Lorem ipsum dolor sit amet</NavLink></h6>
+                                                         
                                                         </div>
-                                                        <div className="wt-post-meta">
+                                                        <div className="">
                                                             <ul>
-                                                                <li className="post-author">25 Dec</li>
-                                                                <li className="post-comment"> 20 comment</li>
+                                                                <li className=""></li>
+                                                                <li className=""></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="widget-post clearfix">
                                                     <div className="wt-post-media">
-                                                        <img src={require("./../../images/blog/recent-blog/pic2.jpg").default} alt="" />
+                                                        <img src={require("./../../images/our-team5/map.png").default} alt="" />
                                                     </div>
                                                     <div className="wt-post-info">
                                                         <div className="wt-post-header">
@@ -75,38 +75,70 @@ class Footer3 extends React.Component {
                                 </div>
                                 {/* USEFUL LINKS */}
                                 <div className="col-lg-3 col-md-6 col-sm-6">
-                                    <div className="widget widget_services inline-links">
-                                        <h4 className="widget-title">Useful links</h4>
-                                        <ul>
-                                            <li><NavLink to={"/aboutus"}>About</NavLink></li>
-                                            <li><NavLink to={"/post-gallery"}>Gallery</NavLink></li>
-                                            <li><NavLink to={"/news-grid"}>News</NavLink></li>
-                                            <li><NavLink to={"/work-masonary"}>Work</NavLink></li>
-                                            <li><NavLink to={"/project-detail"}>Project</NavLink></li>
-                                            <li><NavLink to={"/contactus"}>Contact us</NavLink></li>
-                                            <li><NavLink to={"/work-masonary"}>Site Map</NavLink></li>
-                                            <li><NavLink to={"/project-detail"}>Career</NavLink></li>
-                                            <li><NavLink to={"/contactus"}>Help </NavLink></li>
-                                        </ul>
+                                <div className="widget recent-posts-entry">
+                                        <h4 className="widget-title  text-uppercase"></h4>
+                                        <div className="section-content">
+                                            <div className="widget-post-bx">
+                                            <div className="widget-post clearfix">
+                                                    <div className="wt-post-media">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647301712/telephone_alf0j2.png"} alt="" />
+                                                    </div>
+                                                    <div className="wt-post-info">
+                                                        <div className="wt-post-header">
+                                                        <h6 className="post-title"><NavLink to={"/post-right-sidebar"}>+88012345678</NavLink></h6>
+                                                        </div>
+                                                 
+                                                    </div>
+                                                </div>
+                                            <div className="widget-post clearfix">
+                                                    <div className="wt-post-media">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647301712/phone-call_z7hmjm.png"} alt="" />
+                                                    </div>
+                                                    <div className="wt-post-info">
+                                                        <div className="wt-post-header">
+                                                        <h6 className="post-title"><NavLink to={"/post-right-sidebar"}>+88023456</NavLink></h6>
+                                                        </div>
+                                                  
+                                                    </div>
+                                                </div>
+                                                <div className="widget-post clearfix">
+                                                    <div className="wt-post-media">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647301712/email_s3m0ed.png"} alt="" />
+                                                    </div>
+                                                    <div className="wt-post-info">
+                                                        <div className="wt-post-header">
+                                                        <h6 className="post-title"><NavLink to={"/post-right-sidebar"}>info@manamagrp.com </NavLink></h6>
+                                                        </div>
+                                                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 {/* TAGS */}
                                 <div className="col-lg-3 col-md-6 col-sm-6">
-                                    <div className="tag-small widget  widget_tag_cloud m-b20">
-                                        <h4 className="widget-title">Tags</h4>
-                                        <div className="tagcloud">
-                                        <NavLink to={"/aboutus"}>Trouble </NavLink>
-                                            <NavLink to={"/aboutus"}>Programmer </NavLink>
-                                            <NavLink to={"/aboutus"}>Never </NavLink>
-                                            <NavLink to={"/aboutus"}>Tell </NavLink>
-                                            <NavLink to={"/aboutus"}>Doing </NavLink>
-                                            <NavLink to={"/aboutus"}>Person </NavLink>
-                                            <NavLink to={"/aboutus"}>Between  </NavLink>
-                                            <NavLink to={"/aboutus"}>Macho </NavLink>
-                                            <NavLink to={"/aboutus"}>Gets  </NavLink>
-                                            <NavLink to={"/aboutus"}>Inventors </NavLink>
-                                            <NavLink to={"/aboutus"}>Abilities </NavLink>
-                                            <NavLink to={"/aboutus"}>Fault  </NavLink>
+                                <div className="widget recent-posts-entry">
+                                        <h4 className="widget-title  text-uppercase"></h4>
+                                        <div className="section-content">
+                                            <div className="widget-post-bx">
+                                            <div className="widget-post clearfix">
+                                                    <div style={{marginRight:"10px"}} className="wt-post-socials">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647303163/facebook_rzsipv.png"} alt="" />
+                                                    </div>
+                                                    <div style={{marginRight:"10px"}} className="wt-post-socials">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647303163/linkedin_l8v8w0.png"} alt="" />
+                                                    </div>
+                                                    <div style={{marginRight:"10px"}} className="wt-post-socials">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647303163/youtube_bxewmh.png"} alt="" />
+                                                    </div>
+                                                    <div className="wt-post-socials">
+                                                        <img src={"https://res.cloudinary.com/dl2tsdbcf/image/upload/v1647303163/instagram_adixpe.png"} alt="" />
+                                                    </div>
+                                                </div>
+                                      
+                                        
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -120,18 +152,18 @@ class Footer3 extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="wt-footer-bot-left">
-                                    <span className="copyrights-text">© 2022 Your Company. Designed By thememajestic.</span>
+                                    <span className="copyrights-text">© 2022 Manama Group. Designed By Insighters.</span>
                                 </div>
-                                <div className="wt-footer-bot-right">
-                                    <ul className="copyrights-nav pull-right">
-                                        <li><NavLink to={"/aboutus"}>Terms  &amp; Condition</NavLink></li>
-                                        <li><NavLink to={"/aboutus"}>Privacy Policy</NavLink></li>
-                                        <li><NavLink to={"/contactus"}>Contact Us</NavLink></li>
-                                    </ul>
-                                </div>
+                           
+
+
+
+
+                           
                             </div>
                         </div>
                     </div>
+                    <Whatsapp/>
                 </footer>
 
 
